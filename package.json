@@ -1,0 +1,19 @@
+{
+  "name": "strframe",
+  "version": "1.0.0",
+  "description": "the program to alter a strings",
+  "keywords": [
+    "string",
+    "alter",
+    "strframe"
+  ],
+  "homepage": "https://github.com/Vladislav-Lyuminarskiy/software-development-tools#readme.md",
+  "bugs": {
+    "email": "deadspace1999@mail.ru"
+  },
+  "license": "MIT",
+  "author": "Zakhar Pustovgarov",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
