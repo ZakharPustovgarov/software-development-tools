@@ -3,6 +3,19 @@ function NotNull(val)
   return val != "";
 }
 
+function compareLength(a, b)
+{
+    if (a.length > b.length) 
+    {
+        return -1;
+    }
+    else if (a.length < b.length) 
+    {
+        return 1;
+    }
+    else return 0; 
+}
+
 function strip (str)
 {   
     return str_res = str.split(" ").filter(NotNull).join(" ");
@@ -15,41 +28,8 @@ function reverse(str)
 
 function sort(str)
 {
-    var str_new = new String;
-    var str_arr = new Array();
-    var buf = "";
-
-    for (var i = 0; i < str.length; i++)
-    {
-        if((str[i] != " " && str[i+1] == " ") || (i == str.length-1 && str[i] != " "))
-        {
-            buf += str[i]; 
-            str_arr.push(buf);
-            buf = "";
-        }
-        else if(str[i] != " " && str[i+1] != " ")
-        {
-            buf += str[i]; 
-        }
-    }
-
-    for (var i = 0; i < str_arr.length; i++)
-    {
-        var max = i;
-        for (var k = i+1; k < str_arr.length; k++)
-        {
-            if (str_arr[max].length < str_arr[k].length) max = k;
-        }
-        if (i!= max)
-        {
-            buf = str_arr[max];
-            str_arr[max] = str_arr[i];
-            str_arr[i] = buf;
-        }
-        str_new += str_arr[i];
-        if(i!=str_arr.length-1)str_new += " ";
-    }
-    return str_new;
+    return str_res = strip(str).split(" ").sort(compareLength).join(" ");
 }
+
 
 module.exports = { strip: strip, sort: sort, reverse: reverse };
