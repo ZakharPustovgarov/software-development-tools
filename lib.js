@@ -10,30 +10,7 @@ function strip (str)
 
 function reverse(str)
 {
-    var str_new = new String;
-    var str_arr = new Array();
-    var buf = "";
-    for (var i = 0; i < str.length; i++)
-    {
-        if((str[i] != " " && str[i+1] == " ") || (i == str.length-1 && str[i] != " "))
-        {
-            buf += str[i]; 
-            str_arr.push(buf);
-            buf = "";
-        }
-        else if(str[i] != " " && str[i+1] != " ")
-        {
-            buf += str[i]; 
-        }
-    }
-
-    for (var i = str_arr.length-1; i > -1; i--)
-    {
-    	
-        str_new += str_arr[i];
-        if(i!=0)str_new += " ";
-    }
-    return str_new;
+    return str_res = strip(str).split(" ").reverse().join(" ");
 }
 
 function sort(str)
