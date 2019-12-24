@@ -1,0 +1,24 @@
+{
+  "name": "htmltester",
+  "version": "1.0.0",
+  "description": "the program to test html pages",
+  "keywords": [
+    "html",
+    "test",
+    "htmltester"
+  ],
+  "homepage": "https://github.com/ZakharPustovgarov/software-development-tools-3.2#readme.md",
+  "bugs": {
+    "email": "deadspace1999@mail.ru"
+  },
+  "license": "MIT",
+  "author": "Zakhar Pustovgarov",
+  "dependencies": {
+    "jest": "^24.9.0",
+    "jest-puppeteer": "^4.3.0",
+    "puppeteer": "^2.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
