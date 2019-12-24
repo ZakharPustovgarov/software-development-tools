@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>puppeteer check</title>
+
+</head>
+
+<body>
+
+    <form>
+
+        <input readonly id = "a2" type="text">
+
+        <input id = "a1" type="text" onkeyup="changeInput()">
+
+        <button type = "submit">Отправить</button>
+
+        <button type = "reset">Очистить</button>
+
+    </form>
+
+    <script type = "text/javascript">
+
+        function changeInput() {
+        var currentVal = document.getElementById("a1").value;
+        var changeVal = document.getElementById("a2");
+        changeVal.readonly = false;
+        changeVal.value = currentVal;
+        changeVal.readonly = true;
+        };
+        
+    </script>
+
+</body>
+
+</html>
