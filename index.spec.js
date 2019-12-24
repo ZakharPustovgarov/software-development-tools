@@ -15,4 +15,16 @@ describe('Puppeteer', () => {
     var closedInputText = await page.$eval('#a2', el => el.value);
     expect(closedInputText).toEqual('asdfr');
   });
+
+  it('test of clearing', async () => {
+    var openedInputText = await page.$eval('#a1', el => el.value);
+    expect(openedInputText).toEqual('asdfr');
+    var closedInputText = await page.$eval('#a2', el => el.value);
+    expect(closedInputText).toEqual('asdfr');
+    await page.click('button[type="reset"]');
+    var openedInputText = await page.$eval('#a1', el => el.value);
+    expect(openedInputText).toEqual('');
+    var closedInputText = await page.$eval('#a2', el => el.value);
+    expect(closedInputText).toEqual('');
+  });
 });
